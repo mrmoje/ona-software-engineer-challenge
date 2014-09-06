@@ -33,7 +33,7 @@ def calculate(url=None):
     :returns: summary dict
 
     Pretty print result with:-
-    simplejson.dumps(return_value, indent=4, sort_keys=True)
+    json.dumps(return_value, indent=4, sort_keys=True)
     '''
 
     if not url:
