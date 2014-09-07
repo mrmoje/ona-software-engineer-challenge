@@ -33,7 +33,7 @@ module.exports = {
                             "number_functional": 
                                 data_set.filter(
                                     function (x) {
-                                        return x.water_functioning=="yes";
+                                        return x.water_functioning==="yes";
                                     }).length,
                             "number_water_points": 
                                 _.countBy(data_set,
@@ -52,7 +52,7 @@ module.exports = {
                                         function (v,k) {
                                             return [k, Math.ceil(100*v.filter(
                                                 function (x) {
-                                                    return x.water_functioning=="yes";
+                                                    return x.water_functioning!=="yes";
                                                 }).length/v.length)];
                                         }
                                     )
