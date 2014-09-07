@@ -10,6 +10,6 @@ ona software engineer challenge
 
 The challenge Solutions herein have been implemented in :-
    
-   - Node.js (javascripit.js)
+   - Node.js (javascript.js)
    - Python 2.7 (py2_7.py)
    - Python 3 (py3.py)
