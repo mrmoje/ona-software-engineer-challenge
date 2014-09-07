@@ -50,8 +50,8 @@ def calculate(url=None):
             # or len([x for x in data_set if x['water_functioning']=='yes']),  # noqa
         'number_water_points':
             Counter(x['communities_villages'] for x in data_set),
-        'community_ranking': dict(map(lambda t: (t[0], (Counter(
-            x['water_functioning'] for x in t[1])['yes'] * 100) / len(t[1])),
+        'community_ranking': dict(map(lambda t: (t[0], (len(filter(
+            lambda x:x['water_functioning']!='yes',t[1])) * 100) / len(t[1])),
             [(k, list(g)) for k, g in groupby(data_set,
                 lambda x: x['communities_villages'])])),
     }
